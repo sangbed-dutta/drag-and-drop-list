@@ -1,0 +1,50 @@
+{
+  "name": "draganddroplist",
+  "displayName": "Drag and Drop List",
+  "description": "A list component that can be dragged and dropped anywhere on the page. Each item displays a title and subtitle. Supports grouping, tap events, and custom titles.",
+  "iconUrl": "icon.svg",
+  "webSupport": true,
+  "props": {
+    "data": {
+      "name": "data",
+      "displayName": "Data",
+      "description": "Array of items to render in the list. Each item must have a unique 'key' or 'id' property (string or number).",
+      "type": "object",
+      "isList": true,
+      "isRequired": true
+    },
+    "title": {
+      "name": "title",
+      "displayName": "Title",
+      "description": "Optional title to display at the top of the list.",
+      "type": "string"
+    },
+    "groupBy": {
+      "name": "groupBy",
+      "displayName": "Group By",
+      "description": "Property name or function to group items by. Can be a string (property name) or a function that returns a group key.",
+      "type": "object"
+    },
+    "style": {
+      "name": "style",
+      "displayName": "Style",
+      "description": "Custom style for the list container.",
+      "type": "object"
+    }
+  },
+  "events": {
+    "onTap": {
+      "name": "onTap",
+      "displayName": "On Tap",
+      "description": "Callback when a list item is tapped. Returns the item and its index.",
+      "type": "object"
+    },
+    "onDrop": {
+      "name": "onDrop",
+      "displayName": "On Drop",
+      "description": "Callback when the list is dropped. Returns the new position (x, y).",
+      "type": "object"
+    }
+  },
+  "styles": {}
+}
